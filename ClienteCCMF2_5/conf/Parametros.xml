@@ -1,0 +1,22 @@
+<Configuracion>
+<!-- Inside a XML tag
+    < is &lt;
+    > is &gt; 
+When in Windows: 'C:/path/to/driverjdbc.jar'
+-->
+<DATABASE DRIVER_LOCATION='/var/www/html/gps_db/ClienteCCMF2_5/lib/mysql-connector-java-5.0.8-bin.jar'
+          DRIVER_CLASS='com.mysql.jdbc.Driver'
+          BD_URL='jdbc:mysql://127.0.0.1:3306/gps_savt'
+          USER='root' PASSWORD='150189'
+          DATE_FORMAT='yyyy-MM-dd HH:mm:ss'  COOR_FORMAT='GD' PANIC_VAL='PANIC'
+		  
+          QUERY="SELECT veh.placa, longitud, latitud, rumbo, velocidad, fecha, panico
+            FROM mensajes mj
+            INNER JOIN vehiculo AS veh ON mj.placa = veh.placa
+            WHERE fecha > DATE_ADD( now( ) , INTERVAL -60
+            MINUTE )
+            ORDER BY mj.placa DESC " >
+</DATABASE>
+<TRANSMISION NOMBRE='SavtGPS' IP_CCMF='200.60.145.130' MSG_PORT='7773'>
+</TRANSMISION>
+</Configuracion>

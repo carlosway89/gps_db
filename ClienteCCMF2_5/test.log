@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-29T19:49:42</date>
+  <millis>1435600182822</millis>
+  <sequence>0</sequence>
+  <logger>de.javawi.jstun.attribute.MappedAddress</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.attribute.MappedAddress</class>
+  <method>parse</method>
+  <thread>16</thread>
+  <message>Message Attribute: Mapped Address parsed: Address 188.107.190.189, Port 45151.</message>
+</record>
+<record>
+  <date>2015-06-29T19:49:42</date>
+  <millis>1435600182825</millis>
+  <sequence>1</sequence>
+  <logger>SourceAddress</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.attribute.SourceAddress</class>
+  <method>parse</method>
+  <thread>16</thread>
+  <message>Message Attribute: Source Address parsed: Address 198.27.81.168, Port 3478.</message>
+</record>
+<record>
+  <date>2015-06-29T19:49:42</date>
+  <millis>1435600182826</millis>
+  <sequence>2</sequence>
+  <logger>de.javawi.jstun.attribute.ChangeRequest</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.attribute.ChangedAddress</class>
+  <method>parse</method>
+  <thread>16</thread>
+  <message>Message Attribute: Changed Address parsed: Address 192.95.17.62, Port 3479.</message>
+</record>
+<record>
+  <date>2015-06-29T19:49:53</date>
+  <millis>1435600193470</millis>
+  <sequence>3</sequence>
+  <logger>de.javawi.jstun.attribute.MappedAddress</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.attribute.MappedAddress</class>
+  <method>parse</method>
+  <thread>16</thread>
+  <message>Message Attribute: Mapped Address parsed: Address 188.107.190.189, Port 45151.</message>
+</record>
+<record>
+  <date>2015-06-29T19:49:53</date>
+  <millis>1435600193470</millis>
+  <sequence>4</sequence>
+  <logger>SourceAddress</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.attribute.SourceAddress</class>
+  <method>parse</method>
+  <thread>16</thread>
+  <message>Message Attribute: Source Address parsed: Address 192.95.17.62, Port 3479.</message>
+</record>
+<record>
+  <date>2015-06-29T19:49:53</date>
+  <millis>1435600193471</millis>
+  <sequence>5</sequence>
+  <logger>de.javawi.jstun.attribute.ChangeRequest</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.attribute.ChangedAddress</class>
+  <method>parse</method>
+  <thread>16</thread>
+  <message>Message Attribute: Changed Address parsed: Address 198.27.81.168, Port 3478.</message>
+</record>
+<record>
+  <date>2015-06-29T19:50:03</date>
+  <millis>1435600203988</millis>
+  <sequence>6</sequence>
+  <logger>DiscoveryTest</logger>
+  <level>OFF</level>
+  <class>de.javawi.jstun.test.DiscoveryTest</class>
+  <method>test3</method>
+  <thread>16</thread>
+  <message>Node is behind a port restricted NAT.</message>
+</record>
+</log>
