@@ -37,7 +37,7 @@ class ApiController extends Controller
                 'users'=>array('@'),
                 ),
             array('allow',
-                'actions'=>array('index','view','form','list','tester'),
+                'actions'=>array('index','view','form','list','tester','external'),
                 'users'=>array('*'),
                 ),
             array('deny',  // deny all to users
@@ -49,9 +49,7 @@ class ApiController extends Controller
     public function _checkAuth($model="donot"){
 
         if (!Yii::app()->user->id) {
-            if ($model!="Post" and $model!="Menu" and $model!="Language" and $model!="Content" ) {
                 $this->_sendResponse(401,'Not Allowed');
-            }
         }       
 
         
@@ -69,6 +67,11 @@ class ApiController extends Controller
 
     public function actionTester(){
 
+
+    }
+
+    public function actionExternal(){
+        
         $file='http://gps.gsavt.com/services/history.php?xml=true&login=jhoana&password=jh12345&datetime_from=2015-06-23%2002:00:00&datetime_to=2015-06-24%2010:25:59';
 
         $c = curl_init($file);
@@ -78,8 +81,10 @@ class ApiController extends Controller
         $xml=simplexml_load_string($page);
         print_r($xml);
 
-    }
 
+        
+
+    }
 
 
     function getRealIP() {

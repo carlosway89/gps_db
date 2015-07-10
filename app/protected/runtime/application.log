@@ -1604,3 +1604,12 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/gps_db/app/goo
 ---
+2015/07/10 14:21:48 [error] [exception.CException] exception 'CException' with message 'CHttpRequest is unable to determine the request URI.' in /var/www/html/gps_db/app/yii/framework/web/CHttpRequest.php:506
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CHttpRequest.php(418): CHttpRequest->getRequestUri()
+#1 /var/www/html/gps_db/app/yii/framework/web/CUrlManager.php(361): CHttpRequest->getPathInfo()
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+---
