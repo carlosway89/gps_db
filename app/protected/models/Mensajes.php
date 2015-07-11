@@ -8,12 +8,11 @@
  * @property string $longitud
  * @property string $latitud
  * @property integer $velocidad
- * @property integer $altitud
- * @property integer $codigo_pais
  * @property integer $rumbo
  * @property string $fecha
  * @property string $panico
  * @property string $placa
+ * @property integer $coordinate_id
  */
 class Mensajes extends CActiveRecord
 {
@@ -43,14 +42,14 @@ class Mensajes extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('longitud, latitud, velocidad, altitud, codigo_pais, rumbo, fecha, panico, placa', 'required'),
-			array('velocidad, altitud, codigo_pais, rumbo', 'numerical', 'integerOnly'=>true),
+			array('longitud, latitud, velocidad, rumbo, fecha, placa, coordinate_id', 'required'),
+			array('velocidad, rumbo, coordinate_id', 'numerical', 'integerOnly'=>true),
 			array('longitud, latitud', 'length', 'max'=>10),
 			array('panico', 'length', 'max'=>3),
 			array('placa', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, longitud, latitud, velocidad, altitud, codigo_pais, rumbo, fecha, panico, placa', 'safe', 'on'=>'search'),
+			array('id, longitud, latitud, velocidad, rumbo, fecha, panico, placa, coordinate_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,12 +74,11 @@ class Mensajes extends CActiveRecord
 			'longitud' => 'Longitud',
 			'latitud' => 'Latitud',
 			'velocidad' => 'Velocidad',
-			'altitud' => 'Altitud',
-			'codigo_pais' => 'Codigo Pais',
 			'rumbo' => 'Rumbo',
 			'fecha' => 'Fecha',
 			'panico' => 'Panico',
 			'placa' => 'Placa',
+			'coordinate_id' => 'Coordinate',
 		);
 	}
 
@@ -99,12 +97,11 @@ class Mensajes extends CActiveRecord
 		$criteria->compare('longitud',$this->longitud,true);
 		$criteria->compare('latitud',$this->latitud,true);
 		$criteria->compare('velocidad',$this->velocidad);
-		$criteria->compare('altitud',$this->altitud);
-		$criteria->compare('codigo_pais',$this->codigo_pais);
 		$criteria->compare('rumbo',$this->rumbo);
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('panico',$this->panico,true);
 		$criteria->compare('placa',$this->placa,true);
+		$criteria->compare('coordinate_id',$this->coordinate_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1613,3 +1613,27 @@ Stack trace:
 #4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
 #5 {main}
 ---
+2015/07/10 21:07:05 [error] [php] Array to string conversion (/var/www/html/gps_db/app/protected/commands/savedataCommand.php:9)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#1 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/11 09:48:36 [error] [php] include(Mesajes.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/controllers/ApiController.php(92): spl_autoload_call()
+#1 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionExternal()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ApiController->runAction()
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ApiController->filterAccessControl()
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ApiController->runActionWithFilters()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ApiController->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/api/external
+in /var/www/html/gps_db/app/protected/controllers/ApiController.php (92)
+in /var/www/html/gps_db/app/index.php (13)
