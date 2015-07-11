@@ -8,7 +8,15 @@ class savedataCommand extends CConsoleCommand {
  		header('Content-type: application/json');
         $user="jhoana";
         $password="jh12345";
-        $file="http://gps.gsavt.com/services/history.php?xml=true&login=$user&password=$password&datetime_from=2015-06-23%2002:00:00&datetime_to=2015-06-24%2010:25:59";
+
+        // $date_from="2015-06-23%2002:00:00";
+        $date_from=date("Y-m-d H:i:s", time() - 86400); //1 day ago
+
+        // $date_to="2015-06-24%2010:25:59";
+
+        $date_to=date("Y-m-d H:i:s");
+
+        $file="http://gps.gsavt.com/services/history.php?xml=true&login=$user&password=$password&datetime_from=$date_from&datetime_to=$date_to";
 
         $c = curl_init($file);
         curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
@@ -16,7 +24,7 @@ class savedataCommand extends CConsoleCommand {
         curl_close($c);
         $xml=simplexml_load_string($page);
         
-        $point_current='';
+        // var_dump($xml);
 
         if ($xml->point) {
             
@@ -25,9 +33,9 @@ class savedataCommand extends CConsoleCommand {
                 $vehiculo=new Vehiculo();
                 $mensaje=new Mensajes();
 
-                // $modelo=Mensajes::model()->findByAttributes(array("coordinate_id"=>$value->coordinate_id)); 
+                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime)); 
 
-                // if (!$modelo) {
+                if ($modelo==null) {
                 
                     $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$value->object)); 
                     if (!$vehicle_current) {
@@ -35,7 +43,6 @@ class savedataCommand extends CConsoleCommand {
                         $vehiculo->placa=$value->object;
                         $vehiculo->nombre=$value->object;
 
-                        $point_current=$value->object;
 
                         if (!$vehiculo->save()){
                             // Errors occurred
@@ -81,7 +88,7 @@ class savedataCommand extends CConsoleCommand {
                         $msg .= "</ul>";
                         $this->_sendResponse(500, $msg );
                     }
-                // }
+                }
 
                 
             }
