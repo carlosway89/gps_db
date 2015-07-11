@@ -44,7 +44,7 @@ class Mensajes extends CActiveRecord
 		return array(
 			array('longitud, latitud, velocidad, rumbo, fecha, placa, coordinate_id', 'required'),
 			array('velocidad, rumbo, coordinate_id', 'numerical', 'integerOnly'=>true),
-			array('longitud, latitud', 'length', 'max'=>10),
+			array('longitud, latitud', 'length', 'max'=>15),
 			array('panico', 'length', 'max'=>3),
 			array('placa', 'length', 'max'=>100),
 			// The following rule is used by search().

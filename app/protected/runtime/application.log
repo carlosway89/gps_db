@@ -1637,3 +1637,21 @@ Stack trace:
 REQUEST_URI=/gps_db/app/api/external
 in /var/www/html/gps_db/app/protected/controllers/ApiController.php (92)
 in /var/www/html/gps_db/app/index.php (13)
+2015/07/11 12:26:28 [error] [php] include(Mensaje.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/commands/savedataCommand.php(28): spl_autoload_call()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): savedataCommand->run()
+#2 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#4 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/11 12:27:33 [error] [exception.CDbException] exception 'CDbException' with message 'Table "mensajes" does not have a column named "cordinate_id".' in /var/www/html/gps_db/app/yii/framework/db/schema/CDbCommandBuilder.php:591
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/db/ar/CActiveRecord.php(1464): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /var/www/html/gps_db/app/protected/commands/savedataCommand.php(28): CActiveRecord->findByAttributes(Array)
+#2 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): savedataCommand->run(Array)
+#3 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#4 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#5 /var/www/html/gps_db/app/cron.php(12): CApplication->run()
+#6 {main}
+---
