@@ -3,6 +3,72 @@
 class savedataCommand extends CConsoleCommand {
 	
 
+    public function saveVehicle($value){
+
+        $vehiculo=new Vehiculo();
+
+        $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$value->object)); 
+
+        if (!$vehicle_current) {
+
+            $vehiculo->placa=$value->object;
+            $vehiculo->nombre=$value->object;
+
+
+            if (!$vehiculo->save()){
+                // Errors occurred
+                $msg = "<h1>Error</h1>";
+                $msg .= sprintf("Couldn't create model <b>%s</b>");
+                $msg .= "<ul>";
+                foreach($vehiculo->errors as $attribute=>$attr_errors) {
+                    $msg .= "<li>Attribute: $attribute</li>";
+                    $msg .= "<ul>";
+                    foreach($attr_errors as $attr_error) {
+                        $msg .= "<li>$attr_error</li>";
+                    }        
+                    $msg .= "</ul>";
+                }
+                $msg .= "</ul>";
+                // $this->_sendResponse(500, $msg );
+
+                $this->saveVehicle($value);
+            }
+        }
+    }
+
+    public function saveMensajes($value){
+
+        $mensaje=new Mensajes();
+
+        $mensaje->placa=$value->object;
+        $mensaje->coordinate_id=$value->coordinate_id;
+        $mensaje->longitud=$value->longitude;
+        $mensaje->latitud=$value->latitude;
+        $mensaje->velocidad=$value->speed;
+        $mensaje->fecha=$value->datetime;
+        $mensaje->rumbo=$value->direction;
+
+
+        if (!$mensaje->save()) {
+            // Errors occurred
+            $msg = "<h1>Error</h1>";
+            $msg .= sprintf("Couldn't create model <b>%s</b>");
+            $msg .= "<ul>";
+            foreach($mensaje->errors as $attribute=>$attr_errors) {
+                $msg .= "<li>Attribute: $attribute</li>";
+                $msg .= "<ul>";
+                foreach($attr_errors as $attr_error) {
+                    $msg .= "<li>$attr_error</li>";
+                }        
+                $msg .= "</ul>";
+            }
+            $msg .= "</ul>";
+            // $this->_sendResponse(500, $msg );
+
+            $this->saveMensajes($value);
+        }
+    }
+
  	public function run() {
 
  		header('Content-type: application/json');
@@ -30,70 +96,17 @@ class savedataCommand extends CConsoleCommand {
             
             foreach ($xml->point as $key => $value) {
 
-                $vehiculo=new Vehiculo();
-                $mensaje=new Mensajes();
-
                 $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime)); 
 
                 if ($modelo==null) {
                 
-                    $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$value->object)); 
-                    if (!$vehicle_current) {
+                    $this->saveVehicle($value);
 
-                        $vehiculo->placa=$value->object;
-                        $vehiculo->nombre=$value->object;
-
-
-                        if (!$vehiculo->save()){
-                            // Errors occurred
-                            $msg = "<h1>Error</h1>";
-                            $msg .= sprintf("Couldn't create model <b>%s</b>");
-                            $msg .= "<ul>";
-                            foreach($vehiculo->errors as $attribute=>$attr_errors) {
-                                $msg .= "<li>Attribute: $attribute</li>";
-                                $msg .= "<ul>";
-                                foreach($attr_errors as $attr_error) {
-                                    $msg .= "<li>$attr_error</li>";
-                                }        
-                                $msg .= "</ul>";
-                            }
-                            $msg .= "</ul>";
-                            $this->_sendResponse(500, $msg );
-                        }
-                    }
-
-                    $mensaje->placa=$value->object;
-
-                    $mensaje->coordinate_id=$value->coordinate_id;
-                    $mensaje->longitud=$value->longitude;
-                    $mensaje->latitud=$value->latitude;
-                    $mensaje->velocidad=$value->speed;
-                    $mensaje->fecha=$value->datetime;
-                    $mensaje->rumbo=$value->direction;
-
-
-                    if (!$mensaje->save()) {
-                        // Errors occurred
-                        $msg = "<h1>Error</h1>";
-                        $msg .= sprintf("Couldn't create model <b>%s</b>");
-                        $msg .= "<ul>";
-                        foreach($mensaje->errors as $attribute=>$attr_errors) {
-                            $msg .= "<li>Attribute: $attribute</li>";
-                            $msg .= "<ul>";
-                            foreach($attr_errors as $attr_error) {
-                                $msg .= "<li>$attr_error</li>";
-                            }        
-                            $msg .= "</ul>";
-                        }
-                        $msg .= "</ul>";
-                        $this->_sendResponse(500, $msg );
-                    }
+                    $this->saveMensajes($value);
                 }
 
                 
             }
-
-            echo "success";
         }
  	}
 
