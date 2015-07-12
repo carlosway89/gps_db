@@ -7,11 +7,12 @@ class savedataCommand extends CConsoleCommand {
 
         $vehiculo=new Vehiculo();
 
-        $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$value->object)); 
+        $placa=str_replace(" ","-",$value->object);
+        $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$placa)); 
 
         if (!$vehicle_current) {
 
-            $vehiculo->placa=$value->object;
+            $vehiculo->placa=$placa;
             $vehiculo->nombre=$value->object;
 
 
@@ -40,7 +41,7 @@ class savedataCommand extends CConsoleCommand {
 
         $mensaje=new Mensajes();
 
-        $mensaje->placa=$value->object;
+        $mensaje->placa=str_replace(" ","-",$value->object);
         $mensaje->coordinate_id=$value->coordinate_id;
         $mensaje->longitud=$value->longitude;
         $mensaje->latitud=$value->latitude;
