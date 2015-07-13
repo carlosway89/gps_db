@@ -70,11 +70,10 @@ class savedataCommand extends CConsoleCommand {
         }
     }
 
- 	public function run() {
-
- 		header('Content-type: application/json');
-        $user="jhoana";
-        $password="jh12345";
+    public function conexion($user,$password){
+        header('Content-type: application/json');
+        // $user="jhoana";
+        // $password="jh12345";
 
         // $date_from="2015-06-23%2002:00:00";
         $date_from=date("Y-m-d H:i:s", time() - 86400); //1 day ago
@@ -109,6 +108,24 @@ class savedataCommand extends CConsoleCommand {
                 
             }
         }
+    }
+
+ 	public function run() {
+
+        $models=Usuarios::model()->findAll();
+
+        $rows = array();
+         foreach($models as $model){
+            $rows[] = $model->attributes;
+         }
+
+         
+        foreach ($rows as $value) {
+            // print_r($value);
+            $this->conexion($value['user'],$value['password']);
+        }
+
+ 		
  	}
 
 } 
