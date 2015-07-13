@@ -96,7 +96,9 @@ class savedataCommand extends CConsoleCommand {
             
             foreach ($xml->point as $key => $value) {
 
-                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime)); 
+                $placa=strtoupper(str_replace(" ","",$value->object));
+                
+                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime,"placa"=>$placa)); 
 
                 if ($modelo==null) {
                 
