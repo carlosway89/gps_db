@@ -43,7 +43,8 @@ class CButtonColumn extends CGridColumn
 	 * defines additional buttons, their IDs are also recognized here. For example, if a button named 'preview'
 	 * is declared in {@link buttons}, we can use the token '{preview}' here to specify where to display the button.
 	 */
-	public $template='{view} {update} {delete} {add}';
+	public $template='{update} {delete} ';
+	// public $template='{view} {update} {delete} {add}';
 	/**
 	 * @var string the label for the view button. Defaults to "View".
 	 * Note that the label will not be HTML-encoded when rendering.
@@ -341,8 +342,17 @@ EOD;
 		$options=isset($button['options']) ? $button['options'] : array();
 		if(!isset($options['title']))
 			$options['title']=$label;
-		if(isset($button['imageUrl']) && is_string($button['imageUrl']))
-			echo CHtml::link(CHtml::image($button['imageUrl'],$label),$url,$options);
+		if(isset($button['imageUrl']) && is_string($button['imageUrl'])){
+			if ($label=="Update") {
+				echo CHtml::link("<i class='fa fa-pencil fa-lg green-text'></i>",$url,$options)." ";
+			}else{
+				if ($label=="Delete") {
+					echo CHtml::link("<i class='fa fa-trash fa-lg red-text'></i>",$url,$options)." ";
+				}
+			}
+			// CHtml::link("<i class='icon-plus'></i>", array('view', 'id' => $data->IDREQUERIMIENTO), array('title' => 'Verificar',));
+			// echo CHtml::link(CHtml::image($button['imageUrl'],$label),$url,$options);
+		}
 		else
 			echo CHtml::link($label,$url,$options);
 	}

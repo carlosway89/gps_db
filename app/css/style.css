@@ -1,0 +1,193 @@
+body{
+	font-size: 12px;
+	line-height: 22px;
+	color: #666;
+	border-top: 3px solid #EEE;
+	background: #343434 url("../img/back.png") repeat scroll 0% 0%;
+	/*padding-top: 37px;*/
+}
+ body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+main {
+	flex: 1 0 auto;
+}
+.page-footer{
+	position:relative;
+	z-index: 1000;
+	background-color: transparent !important;
+	margin-top: 0px !important;
+	padding-top: 0px !important;
+}
+.fluid{
+	width:100%;
+}
+.center-block{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+ /* label color */
+.input-field label {
+ /*color: #000;*/
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #000;
+}
+.input-field input[type=password]:focus + label {
+ color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #000;
+}
+
+
+.menu-left{
+	/*background-color: #90A4AE;*/
+	background-color: #2B2F3E;
+	/*width: 230px;*/
+	/*margin-top: 63px;*/
+
+	padding: 0px !important;
+
+	width:100%;
+	position: fixed;
+	padding: 25px 0px;
+	box-shadow: -5px 0px 8px rgba(0, 0, 0, 0.3) inset;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+}
+.content-rigth{
+	/*background-color: #26A69A;*/
+}
+.top-navbar{
+	/*height: 64px;*/
+	/*border-radius: 5px 5px 0px 0px;*/
+	position: relative;
+	z-index: 1000;
+	margin-top: -5px;
+	border-top: thin solid #EAEAE9;
+	border-bottom: thin solid #DFDFDE;
+	background: transparent linear-gradient(#E7E7E6, #E2E2E1) repeat scroll 0% 0%;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+    border-color: #DDD;
+    padding:10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.brand-logo img{
+	height: 35px;
+	margin-top: 14px;
+	margin-left: 10px;
+}
+i.nav-middle{
+	margin-top: 17%;
+}
+.collection{
+	border: none;
+	margin: 0;
+}
+.collection .collection-item{
+	background-color: transparent;
+}
+.list-unstyled {
+    padding-left: 0px;
+    list-style: outside none none;
+}
+.menu-nav-left{
+	left: 0px;
+	position: relative;
+	background-color: transparent;
+	width: 100%;
+}
+ul.menu-nav-left li.bold {
+    line-height: 64px !important;
+
+}
+
+ul.menu-nav-left li.bold a{
+    /*color:white !important;*/
+    color: #7A7E8A;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+ul.menu-nav-left li.bold:hover{
+
+	box-shadow: -6px 0px 8px -2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.menu-nav-left li:hover, .menu-nav-left li.active {
+    background-color: transparent !important;
+}
+.menu-nav-left li.bold:hover, .menu-nav-left li.active {
+    background-color: #DDD !important;
+}
+main nav ul a {
+    color: #666;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.pagination li.selected {
+    background-color: #039BE5;
+}
+.pagination li.selected a{
+	color: white;
+}
+.pager{
+	width: 100%;
+	display: inline-block;
+}
+.pager .pagination{
+	float: right;
+}
+@media only screen and (max-width : 992px) {
+
+	tr.filters{
+		display:none !important;
+	}
+}

@@ -6,7 +6,7 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
-	public $layout='//site/index';
+	public $layout='//layouts/main';
 	
 	public function filters()
 	{
@@ -18,11 +18,11 @@ class SiteController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('panel','logout'),
-					'users'=>array('Yii::app()->user->checkAccess("administrador")')
+				'actions'=>array('logout'),
+					'users'=>array('@')
 					),
 			array('allow',
-				'actions'=>array('index','login','logout'),
+				'actions'=>array('index','login'),
 					'users'=>array('*') 
 					),
 			// array('deny',
@@ -59,13 +59,8 @@ class SiteController extends Controller
 		// $criteria->limit = 1000;
   //       $menu=Menu::model()->findAll($criteria);
 
-		$this->render('index');
-	}
-	public function actionPanel()
-	{
-		$this->layout='//layouts/panel';
-
-		$this->render('index');
+		// $this->render('index');
+		$this->redirect(array('/login'));
 	}
 
 	/**
@@ -73,17 +68,15 @@ class SiteController extends Controller
 	 */
 	public function actionError()
 	{
-		// $this->layout='//layouts/main';
+		$this->layout='//layouts/main';
 
-		// if($error=Yii::app()->errorHandler->error)
-		// {
-		// 	if(Yii::app()->request->isAjaxRequest)
-		// 		echo $error['message'];
-		// 	else
-		// 		$this->render('error');
-		// }
-		error_reporting(0);
-		$this->render('index');
+		if($error=Yii::app()->errorHandler->error)
+		{
+			if(Yii::app()->request->isAjaxRequest)
+				echo $error['message'];
+			else
+				$this->render('error');
+		}
 	}
 
 	/**
