@@ -35,7 +35,7 @@
 
 	<div class="row buttons">
 
-	  <button class="btn waves-effect waves-light" type="submit" name="action"><?=$model->isNewRecord ? 'Crear' : 'Actualizar'?>
+	  <button class="btn waves-effect waves-light" type="submit" name="action"><?php echo $model->isNewRecord ? 'Crear' : 'Actualizar'; ?>
 	    
 	  </button>
 	  <a class="btn grey darken-1" href="<?php echo Yii::app()->request->baseUrl; ?>/usuarios">Cancelar</a>
