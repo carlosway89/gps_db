@@ -12,12 +12,10 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/materialize/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css">
 
-	<!--
 
-	jquery  ist already called by assed provide for YII
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-2.1.1.min.js"></script>
 
-	-->
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/assets/83c90931/jquery.ba-bbq.js"></script>
 
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/materialize/js/materialize.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,7 +46,7 @@
   	<nav class="top-navbar">
   		  <a href="#" class="brand-logo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png"></a>
 		  <ul class="right hide-on-med-and-down">
-		    <li><a href="#!">Reporte Detallado</a></li>
+		    <!-- <li><a href="#!">Reporte Detallado</a></li> -->
 		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes">GPS Transmicion</a></li>
 		    <!-- Dropdown Trigger -->
       		<li><a class="dropdown-button" href="#!" data-activates="dropdown1"> Clemente<i class="material-icons right nav-middle">arrow_drop_down</i></a></li>
@@ -66,7 +64,7 @@
 
 		  </ul>
 		  <ul id="dropdown1" class="dropdown-content">
-			  <li><a href="#!" class="grey-text"> <i class="tiny material-icons">settings</i> mi Cuenta</a></li>
+			  <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/update/1" class="grey-text"> <i class="tiny material-icons">settings</i> mi Cuenta</a></li>
 			  <li class="divider"></li>
 			  <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout" class="red-text"> <i class="tiny material-icons">input</i> Log Out</a></li>
 		  </ul>
@@ -81,13 +79,13 @@
 		<li class="bold"><a href="<?php echo Yii::app()->request->baseUrl; ?>/usuarios" class="">Usuarios</a></li>
 		<li class="no-padding">
 		  <ul class="collapsible collapsible-accordion">
-		    <li class="bold"><a class="collapsible-header ">Reportes</a>
+		    <!-- <li class="bold"><a class="collapsible-header ">Reportes</a>
 		      <div style="display: none;" class="collapsible-body">
 		        <ul>
 		          <li class=""><a href="#">Detallado</a></li>
 		        </ul>
 		      </div>
-		    </li>
+		    </li> -->
 		    <li class="bold"><a class="collapsible-header " href="<?php echo Yii::app()->request->baseUrl; ?>/vehiculo">Vehiculos</a>
 		    </li>
 		  </ul>
