@@ -48,7 +48,26 @@ $('.search-form form').submit(function(){
 					// 'estado',
 					'email',
 					array(
-						'class'=>'CButtonColumn'
+						'class'=>'CButtonColumn',
+						// 'template'=>'{single}{update}{delete}',
+						// 'buttons'=>array
+					 //    (
+					 //        'single' => array
+					 //        (
+					 //            'label'=>'[+]',
+					 //            // 'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+					 //            // 'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->id))',
+						// 		'url'=>'Yii::app()->createUrl("mensajes/admin?").?Mensajes[placa]=$data->placa',
+					 //        ),
+					 //        // 'down' => array
+					 //        // (
+					 //        //     'label'=>'<i class="material-icons">chevron_left</i>',
+					 //        //     'url'=>'"#"',
+					 //        //     // 'visible'=>'$data->score > 0',
+					 //        //     'click'=>'function(){alert("Going down!");}',
+					 //        // ),
+					 //    ),
+					
 					),
 				),
 			)); ?>

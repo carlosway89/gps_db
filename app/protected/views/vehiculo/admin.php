@@ -43,9 +43,28 @@ $('.search-form form').submit(function(){
 					// 'id',
 					'placa',
 					'nombre',
-					// array(
-					// 	'class'=>'CButtonColumn',
-					// ),
+					array(
+						'class'=>'CButtonColumn',
+						'template'=>'{single}',
+						'buttons'=>array
+					    (
+					        'single' => array
+					        (
+					            'label'=>'[+]',
+					            // 'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
+					            'url'=>'Yii::app()->createUrl("mensajes/admin", array("Mensajes[placa]"=>$data->placa))',
+								// 'url'=>'Yii::app()->createUrl("mensajes/admin?")',
+					        ),
+					        // 'down' => array
+					        // (
+					        //     'label'=>'<i class="material-icons">chevron_left</i>',
+					        //     'url'=>'"#"',
+					        //     // 'visible'=>'$data->score > 0',
+					        //     'click'=>'function(){alert("Going down!");}',
+					        // ),
+					    ),
+					
+					),
 				),
 			)); ?>
 		</div>
