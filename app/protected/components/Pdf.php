@@ -1,13 +1,13 @@
 <?php 
 // somewhere early in your project's loading, require the Composer autoloader
 // see: http://getcomposer.org/doc/00-intro.md
-require 'vendor/vendor/autoload.php';
+require 'vendor/dompdf/autoload.php';
 
 // disable DOMPDF's internal autoloader if you are using Composer
 define('DOMPDF_ENABLE_AUTOLOAD', false);
 
 // include DOMPDF's default configuration
-require_once 'vendor/vendor/dompdf/dompdf/dompdf_config.inc.php';
+require_once 'vendor/dompdf/dompdf/dompdf/dompdf_config.inc.php';
 
 class Pdf{
 	

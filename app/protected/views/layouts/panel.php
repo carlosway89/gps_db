@@ -17,6 +17,8 @@
 
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/assets/83c90931/jquery.ba-bbq.js"></script>
 
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-beat.min.js"></script>
+
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/materialize/js/materialize.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

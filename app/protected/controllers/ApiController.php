@@ -67,9 +67,29 @@ class ApiController extends Controller
 
     public function actionTester(){
 
-        echo date("Y-m-d H:i:s");
+        // echo date("Y-m-d H:i:s");
 
-        echo date('Y-m-d H:i:s', time() - 3600);
+        // echo date('Y-m-d H:i:s', time() - 3600);
+
+        // $mail=new Mailer();
+
+
+        // $mensaje= (object) array(
+        //     "subject"=>"hola amigos",
+        //     "body"=>"This is the HTML message body <b>in bold!</b>"
+        //     );
+
+
+        // $mail->send('jc_breack18@hotmail.com',$mensaje,null);
+
+        $sql=new Sqlite();
+        $data=$sql->execute('../ClienteCCMF2_5/logJUL22.db');
+
+        foreach ($data as $key => $value) {
+            print_r($value);
+        }
+
+
     }
 
     public function actionExternal(){

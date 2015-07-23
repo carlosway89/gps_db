@@ -18,7 +18,7 @@ class PanelController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('index','usuarios'),
+				'actions'=>array('index','usuarios','transmition'),
 				'users'=>array('@')
 					// 'users'=>array('Yii::app()->user->checkAccess("administrador")')
 					),
@@ -54,11 +54,44 @@ class PanelController extends Controller
 	 */
 	public function actionIndex()
 	{	
-		$this->render('index');
+		
+        if(isset($_GET['placa'])){
+        	$filter=$_GET['placa'];
+        	if (!$filter) {
+        		$sentence="SELECT * FROM vLog;";
+        	}else{
+        		$sentence="SELECT * FROM vLog where placa='".$filter."';";
+        	}
+        	
+        }else{
+        	$sentence="SELECT * FROM vLog;";
+        }
 
-		// $var=new Pdf();
+        // $model=$sql->execute($db,$sentence);
 
-		// $var->test();
+		$this->render('index',array("sentence"=>$sentence));
+	}
+
+	public function actionTransmition($sentence="")
+	{
+		$sql=new Sqlite();
+		$db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";		        
+
+        if(isset($_GET['placa'])){
+        	$filter=$_GET['placa'];
+        	if (!$filter) {
+        		$sentence="SELECT * FROM vLog;";
+        	}else{
+        		$sentence="SELECT * FROM vLog where placa='".$filter."';";
+        	}
+        	
+        }else{
+        	$sentence="SELECT * FROM vLog;";
+        }
+
+        $model=$sql->execute($db,$sentence);
+
+		echo $this->renderPartial('transmition', array('model'=>$model));
 	}
 
 	public function actionUsuarios()	

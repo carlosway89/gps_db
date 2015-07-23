@@ -18,16 +18,16 @@ class SiteController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions'=>array('logout'),
+				'actions'=>array('logout','transmition'),
 					'users'=>array('@')
 					),
 			array('allow',
 				'actions'=>array('index','login'),
 					'users'=>array('*') 
 					),
-			// array('deny',
-			// 		'users'=>array('*'),
-			// 	)
+			array('deny',
+					'users'=>array('*'),
+				)
 			);
 	}
 
@@ -77,6 +77,19 @@ class SiteController extends Controller
 			else
 				$this->render('error');
 		}
+	}
+
+	public function actionTransmition()
+	{
+		$sql=new Sqlite();
+		$db="log".strtoupper(date("Md")).".db";
+
+		// echo $db;
+        $data=$sql->execute("../ClienteCCMF2_5/$db");
+
+        foreach ($data as $key => $value) {
+            print_r($value);
+        }
 	}
 
 	/**

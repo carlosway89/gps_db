@@ -1,10 +1,12 @@
-
+<?php
+$placa=isset($_GET['placa'])?$_GET['placa']:"";
+?>
 <br>
 <!-- <h1>Panel<small> administracion</small></h1> -->
 <div class="row">
 	<div class="col s10 offset-s1">
 		<div class="panel">
-			<h4 class="center-align"><small>Panel de Control</small></h4>
+			<!-- <h4 class="center-align"><small>Panel de Control</small></h4>
 			<br>
 			<div class="row">
 				<div class="col s12">
@@ -17,11 +19,61 @@
 						<h5>Cerrar Sesion</h5>
 					</div>
 				</div>
+			</div> -->
+			<div class="row">
+				<div class="col s12">
+					<br><br>
+					<a class="large btn " href="<?php echo Yii::app()->request->baseUrl; ?>/vehiculo">Filtrar por Placa</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<br>
+					<h5 class="center-align blue-text">Transmicion en Vivo <?php echo $placa!=""?"<small>Placa $placa</small>":"Total"; ?></h5>
+					<div id="data_transmition">
+						<?php
+							$this->actionTransmition($sentence); 
+							// echo $this->renderPartial('transmition', array('model'=>$model)); 
+						?>
+					</div>
+				</div>
 			</div>
 
 		</div>
 	</div>
 </div>
+
+<?php
+
+
+Yii::app()->clientScript->registerScript('maintainer', "
+
+    $.addBeat('transmition-check',function(){
+	     // console.log('transmitiendo');
+	    $.ajax({
+            type: 'GET',
+            url: '".Yii::app()->request->baseUrl."/panel/transmition',
+            data: {                
+                placa: '".$placa."' 
+            },
+            error:function(req, status, error) {
+                // console.log(req.responseText);
+            },
+            success: function (data) {
+                $('#data_transmition').html(data);         
+            }
+        });
+
+	},6000);
+
+
+    
+    ");
+
+
+?>
+
+?>
 
         
             

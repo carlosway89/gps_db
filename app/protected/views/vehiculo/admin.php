@@ -45,15 +45,20 @@ $('.search-form form').submit(function(){
 					'nombre',
 					array(
 						'class'=>'CButtonColumn',
-						'template'=>'{single}',
+						'template'=>'{single}{filter}',
 						'buttons'=>array
 					    (
 					        'single' => array
 					        (
-					            'label'=>'[+]',
+					            'label'=>'<i class="material-icons blue-text">description</i>',
 					            // 'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
 					            'url'=>'Yii::app()->createUrl("mensajes/admin", array("Mensajes[placa]"=>$data->placa))',
 								// 'url'=>'Yii::app()->createUrl("mensajes/admin?")',
+					        ),
+					        'filter' => array
+					        (
+					            'label'=>'<i class="material-icons purple-text text-darken-4">settings_remote</i>',
+					            'url'=>'Yii::app()->createUrl("panel/index", array("placa"=>$data->placa))',
 					        ),
 					        // 'down' => array
 					        // (
