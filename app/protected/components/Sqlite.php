@@ -19,9 +19,9 @@ class Sqlite{
 
 		    $data=array();
 
-		    while ($row = $tablesquery->fetchArray()) {
-			   $data[]=(object)$tablesquery->fetchArray();
-			}
+		 //    while ($row = $tablesquery->fetchArray()) {
+			//    $data[]=(object)$tablesquery->fetchArray();
+			// }
 		}
 	    catch (Exception $exception) {
 	        // sqlite3 throws an exception when it is unable to connect
