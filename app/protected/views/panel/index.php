@@ -32,7 +32,7 @@ $placa=isset($_GET['placa'])?$_GET['placa']:"";
 					<h5 class="center-align blue-text">Transmicion en Vivo <?php echo $placa!=""?"<small>Placa $placa</small>":"Total"; ?></h5>
 					<div id="data_transmition">
 						<?php
-							$this->actionTransmition($sentence); 
+							// $this->actionTransmition($sentence); 
 							// echo $this->renderPartial('transmition', array('model'=>$model)); 
 						?>
 					</div>

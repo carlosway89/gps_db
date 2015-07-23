@@ -89,6 +89,7 @@ class PanelController extends Controller
         // 	$sentence="SELECT * FROM vLog;";
         // }
         $sentence="SELECT * FROM vLog;";
+        
         $model=$sql->execute($db,$sentence);
 
 		echo $this->renderPartial('transmition', array('model'=>$model));
