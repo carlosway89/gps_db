@@ -11,10 +11,31 @@
     </tr>
   </thead>
   <tbody>
-    <?php 
+    <?php
+
+
+
     if (isset($model)) {
+
+
+      if(isset($_GET['placa'])){
+
+        $filter=$_GET['placa'];
+        
+        if ($filter) {
+
+          $model = array_filter((array)$model,function($object){
+            return ($object->placa == $_GET['placa']);
+          });
+        }
+
+      }
+
+          
+
       foreach ($model as $key => $value) {  
-        if (isset($value->placa)) {       
+        if (isset($value->placa)) {    
+
     ?>
         <tr>
           <td><?php echo $value->placa; ?></td>

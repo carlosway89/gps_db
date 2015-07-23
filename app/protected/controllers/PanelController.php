@@ -55,18 +55,18 @@ class PanelController extends Controller
 	public function actionIndex()
 	{	
 		
-        if(isset($_GET['placa'])){
-        	$filter=$_GET['placa'];
-        	if (!$filter) {
-        		$sentence="SELECT * FROM vLog;";
-        	}else{
-        		$sentence="SELECT * FROM vLog where placa='".$filter."';";
-        	}
+        // if(isset($_GET['placa'])){
+        // 	$filter=$_GET['placa'];
+        // 	if (!$filter) {
+        // 		$sentence="SELECT * FROM vLog;";
+        // 	}else{
+        // 		$sentence="SELECT * FROM vLog where placa='".$filter."';";
+        // 	}
         	
-        }else{
-        	$sentence="SELECT * FROM vLog;";
-        }
-
+        // }else{
+        // 	$sentence="SELECT * FROM vLog;";
+        // }
+        $sentence="SELECT * FROM vLog;";
         // $model=$sql->execute($db,$sentence);
 
 		$this->render('index',array("sentence"=>$sentence));
@@ -77,18 +77,18 @@ class PanelController extends Controller
 		$sql=new Sqlite();
 		$db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";		        
 
-        if(isset($_GET['placa'])){
-        	$filter=$_GET['placa'];
-        	if (!$filter) {
-        		$sentence="SELECT * FROM vLog;";
-        	}else{
-        		$sentence="SELECT * FROM vLog where placa='".$filter."';";
-        	}
+        // if(isset($_GET['placa'])){
+        // 	$filter=$_GET['placa'];
+        // 	if (!$filter) {
+        // 		$sentence="SELECT * FROM vLog;";
+        // 	}else{
+        // 		$sentence="SELECT * FROM vLog where placa='".$filter."';";
+        // 	}
         	
-        }else{
-        	$sentence="SELECT * FROM vLog;";
-        }
-
+        // }else{
+        // 	$sentence="SELECT * FROM vLog;";
+        // }
+        $sentence="SELECT * FROM vLog;";
         $model=$sql->execute($db,$sentence);
 
 		echo $this->renderPartial('transmition', array('model'=>$model));
