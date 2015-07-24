@@ -7,7 +7,7 @@
         <th data-field="long">Latitud</th>
         <th data-field="dir">Dirección</th>
         <th data-field="fecLoc">Fecha de Localizacion</th>
-        <th data-field="transmition">Estado Transmicion</th>
+        <th data-field="transmition">Estado Transmision</th>
     </tr>
   </thead>
   <tbody>

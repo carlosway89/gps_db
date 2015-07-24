@@ -82,12 +82,31 @@ class ApiController extends Controller
 
         // $mail->send('jc_breack18@hotmail.com',$mensaje,null);
 
-        $sql=new Sqlite();
-        $data=$sql->execute('../ClienteCCMF2_5/logJUL22.db');
+        // $sql=new Sqlite();
+        // $data=$sql->execute('../ClienteCCMF2_5/logJUL22.db');
 
-        foreach ($data as $key => $value) {
-            print_r($value);
-        }
+        // foreach ($data as $key => $value) {
+        //     print_r($value);
+        // }
+
+
+        $pdf=new Pdf();
+
+        // $file=Yii::app()->getBaseUrl(true)."/panel/transmition";
+
+        // $cadena = file_get_contents($file); 
+        
+        $sql=new Sqlite();
+        
+        $db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";               
+
+        $sentence="SELECT * FROM vLog;";
+        
+        $model=$sql->execute($db,$sentence);
+
+        $html=$this->renderPartial('/panel/transmition', array('model'=>$model),true,true);
+
+        $pdf->create($html);
 
 
     }

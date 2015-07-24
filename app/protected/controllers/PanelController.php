@@ -23,7 +23,7 @@ class PanelController extends Controller
 					// 'users'=>array('Yii::app()->user->checkAccess("administrador")')
 					),
 			// array('allow',
-			// 	'actions'=>array('index'),
+			// 	'actions'=>array('transmition'),
 			// 		'users'=>array('*') 
 			// 		),
 			array('deny',

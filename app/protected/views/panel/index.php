@@ -30,7 +30,7 @@ $placa=isset($_GET['placa'])?$_GET['placa']:"";
 			<div class="row">
 				<div class="col s12">
 					<br>
-					<h5 class="center-align blue-text"><i class="material-icons green-text">settings_input_antenna</i> Transmicion en Vivo <?php echo $placa!=""?"<small>Placa $placa</small>":"Total"; ?></h5>
+					<h5 class="center-align blue-text"><i class="material-icons green-text">settings_input_antenna</i> Transmision en Vivo <?php echo $placa!=""?"<small>Placa $placa</small>":"Total"; ?></h5>
 					<div id="data_transmition">
 						<?php
 							$this->actionTransmition($sentence); 

@@ -11,7 +11,7 @@ require_once 'vendor/dompdf/dompdf/dompdf/dompdf_config.inc.php';
 
 class Pdf{
 	
-	public function test(){
+	public function create($html="<h1>Hola mundo!</h1>"){
 
 		
 
@@ -21,7 +21,7 @@ class Pdf{
 		fclose($fp) ;
 
 		// 		// Introducimos HTML de prueba
-		$html = '<h1>Hola mundo!</h1>';
+		// $html = '<h1>Hola mundo!</h1>';
 		 
 		// // Instanciamos un objeto de la clase DOMPDF.
 		$pdf = new DOMPDF();
@@ -38,6 +38,7 @@ class Pdf{
 		file_put_contents('pdf/'.$filename.".pdf", $pdf->output());
 		// $pdf->stream("dompdf_out.pdf", array("Attachment" => false));
 
+		return "pdf/".$filename.".pdf";
 		// exit(0);
 
 

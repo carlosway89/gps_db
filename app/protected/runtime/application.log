@@ -5008,3 +5008,285 @@ REQUEST_URI=/gps_db/app/panel/index?placa=T6R967
 in /var/www/html/gps_db/app/protected/views/panel/transmition.php (27)
 in /var/www/html/gps_db/app/protected/views/panel/transmition.php (29)
 in /var/www/html/gps_db/app/protected/controllers/PanelController.php (94)
+2015/07/24 14:55:20 [error] [exception.DOMPDF_Exception] exception 'DOMPDF_Exception' with message 'Requested HTML document contains no data.' in /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/frame_tree.cls.php:122
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(676): Frame_Tree->build_tree()
+#1 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(846): DOMPDF->_process_html()
+#2 /var/www/html/gps_db/app/protected/components/Pdf.php(36): DOMPDF->render()
+#3 /var/www/html/gps_db/app/protected/controllers/ApiController.php(101): Pdf->create(NULL)
+#4 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('tester')
+#14 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/tester')
+#15 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/gps_db/app/api/tester
+---
+2015/07/24 14:56:01 [error] [exception.DOMPDF_Exception] exception 'DOMPDF_Exception' with message 'Requested HTML document contains no data.' in /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/frame_tree.cls.php:122
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(676): Frame_Tree->build_tree()
+#1 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(846): DOMPDF->_process_html()
+#2 /var/www/html/gps_db/app/protected/components/Pdf.php(36): DOMPDF->render()
+#3 /var/www/html/gps_db/app/protected/controllers/ApiController.php(102): Pdf->create(NULL)
+#4 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('tester')
+#14 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/tester')
+#15 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/gps_db/app/api/tester
+---
+2015/07/24 14:58:47 [error] [exception.DOMPDF_Exception] exception 'DOMPDF_Exception' with message 'Requested HTML document contains no data.' in /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/frame_tree.cls.php:122
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(676): Frame_Tree->build_tree()
+#1 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(846): DOMPDF->_process_html()
+#2 /var/www/html/gps_db/app/protected/components/Pdf.php(36): DOMPDF->render()
+#3 /var/www/html/gps_db/app/protected/controllers/ApiController.php(102): Pdf->create(NULL)
+#4 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('tester')
+#14 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/tester')
+#15 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/gps_db/app/api/tester
+---
+2015/07/24 15:02:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:02:07 [error] [exception.DOMPDF_Exception] exception 'DOMPDF_Exception' with message 'Requested HTML document contains no data.' in /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/frame_tree.cls.php:122
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(676): Frame_Tree->build_tree()
+#1 /var/www/html/gps_db/app/protected/components/vendor/dompdf/dompdf/dompdf/include/dompdf.cls.php(846): DOMPDF->_process_html()
+#2 /var/www/html/gps_db/app/protected/components/Pdf.php(36): DOMPDF->render()
+#3 /var/www/html/gps_db/app/protected/controllers/ApiController.php(104): Pdf->create('')
+#4 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('tester')
+#14 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/tester')
+#15 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/gps_db/app/api/tester
+---
+2015/07/24 15:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:03:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:03:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
+2015/07/24 15:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/img/logo.pn...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/img/logo.png
+HTTP_REFERER=http://localhost/gps_db/app/api/tester
+---
+2015/07/24 15:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/img/logo.pn...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/img/logo.png
+HTTP_REFERER=http://localhost/gps_db/app/api/tester
+---
+2015/07/24 15:07:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/img/logo.pn...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/img/logo.png
+HTTP_REFERER=http://localhost/gps_db/app/api/tester
+---
+2015/07/24 15:13:42 [error] [exception.CException] exception 'CException' with message 'ApiController cannot find the requested view "transmition".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/controllers/ApiController.php(120): CController->renderPartial('transmition', Array, true, true)
+#1 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('tester')
+#11 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/tester')
+#12 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/gps_db/app/api/tester
+---
+2015/07/24 15:19:55 [error] [exception.CException] exception 'CException' with message 'pdfgeneratorCommand and its behaviors do not have a method or closure named "renderPartial".' in /var/www/html/gps_db/app/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/commands/pdfgeneratorCommand.php(19): CComponent->__call('renderPartial', Array)
+#1 /var/www/html/gps_db/app/protected/commands/pdfgeneratorCommand.php(19): pdfgeneratorCommand->renderPartial('/panel/transmit...', Array, true, true)
+#2 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run(Array)
+#3 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#4 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#5 /var/www/html/gps_db/app/cron.php(12): CApplication->run()
+#6 {main}
+---
+2015/07/24 15:28:12 [error] [php] require(/panel/transmition): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/24 15:28:47 [error] [php] require(transmition): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/24 15:29:43 [error] [php] require(/panel/transmition.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/24 15:31:14 [error] [exception.CException] exception 'CException' with message 'pdfgeneratorCommand and its behaviors do not have a method or closure named "renderInternal".' in /var/www/html/gps_db/app/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/commands/pdfgeneratorCommand.php(21): CComponent->__call('renderInternal', Array)
+#1 /var/www/html/gps_db/app/protected/commands/pdfgeneratorCommand.php(21): pdfgeneratorCommand->renderInternal('/panel/transmit...', Array, true)
+#2 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run(Array)
+#3 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#4 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#5 /var/www/html/gps_db/app/cron.php(12): CApplication->run()
+#6 {main}
+---
+2015/07/24 15:31:41 [error] [php] require(panel/transmition.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/24 15:32:43 [error] [php] require(views/panel/transmition.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/24 15:33:47 [error] [php] require(/protected/views/panel/transmition.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): pdfgeneratorCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/24 15:40:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "panel".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(270): CController->missingAction('panel')
+#1 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('panel')
+#2 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('api/panel/trans...')
+#3 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gps_db/app/api/panel/transmition
+---
