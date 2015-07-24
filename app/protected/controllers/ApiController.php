@@ -67,9 +67,9 @@ class ApiController extends Controller
 
     public function actionTester(){
 
-        // echo date("Y-m-d H:i:s");
+        echo date("Y-m-d H:i:s");
 
-        // echo date('Y-m-d H:i:s', time() - 3600);
+        echo date('Y-m-d H:i:s', time() - 3600);
 
         // $mail=new Mailer();
 
@@ -90,23 +90,19 @@ class ApiController extends Controller
         // }
 
 
-        $pdf=new Pdf();
-
-        // $file=Yii::app()->getBaseUrl(true)."/panel/transmition";
-
-        // $cadena = file_get_contents($file); 
+        // $pdf=new Pdf();
         
-        $sql=new Sqlite();
+        // $sql=new Sqlite();
         
-        $db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";               
+        // $db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";               
 
-        $sentence="SELECT * FROM vLog;";
+        // $sentence="SELECT * FROM vLog;";
         
-        $model=$sql->execute($db,$sentence);
+        // $model=$sql->execute($db,$sentence);
 
-        $html=$this->renderPartial('/panel/transmition', array('model'=>$model),true,true);
+        // $html=$this->renderPartial('/panel/transmition', array('model'=>$model),true,true);
 
-        $pdf->create($html);
+        // $pdf->create($html);
 
 
     }
