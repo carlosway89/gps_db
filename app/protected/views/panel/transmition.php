@@ -1,4 +1,4 @@
-<table class="hoverable centered">
+<table class="hoverable centered responsive-table">
   <thead>
     <tr>
         <th data-field="placa">Placa</th>

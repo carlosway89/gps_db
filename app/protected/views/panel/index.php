@@ -24,12 +24,13 @@ $placa=isset($_GET['placa'])?$_GET['placa']:"";
 				<div class="col s12">
 					<br><br>
 					<a class="large btn " href="<?php echo Yii::app()->request->baseUrl; ?>/vehiculo">Filtrar por Placa</a>
+					<a class="large btn grey" href="<?php echo Yii::app()->request->baseUrl; ?>/panel">Mostrar Todo</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col s12">
 					<br>
-					<h5 class="center-align blue-text">Transmicion en Vivo <?php echo $placa!=""?"<small>Placa $placa</small>":"Total"; ?></h5>
+					<h5 class="center-align blue-text"><i class="material-icons green-text">settings_input_antenna</i> Transmicion en Vivo <?php echo $placa!=""?"<small>Placa $placa</small>":"Total"; ?></h5>
 					<div id="data_transmition">
 						<?php
 							$this->actionTransmition($sentence); 
@@ -70,8 +71,6 @@ Yii::app()->clientScript->registerScript('maintainer', "
     
     ");
 
-
-?>
 
 ?>
 

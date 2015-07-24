@@ -49,17 +49,17 @@
   		  <a href="#" class="brand-logo"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png"></a>
 		  <ul class="right hide-on-med-and-down">
 		    <!-- <li><a href="#!">Reporte Detallado</a></li> -->
-		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes">GPS Transmicion</a></li>
+		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/panel"><i class="tiny material-icons green-text">my_location</i> Transmicion en Vivo</a></li>
 		    <!-- Dropdown Trigger -->
       		<li><a class="dropdown-button" href="#!" data-activates="dropdown1"> Clemente<i class="material-icons right nav-middle">arrow_drop_down</i></a></li>
 		  </ul>
 		  <ul id="slide-out" class="side-nav">
-		  	<li><a href="#!">Home</a></li>
+		  	<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/usuarios">Transmicion en Vivo</a></li>
 		  	<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/usuarios">Usuarios</a></li>
 		    <li><a href="#!">Reporte Grafico</a></li>
 		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/vehiculo">Vehiculos</a>
 		    </li>
-		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes">GPS transmicion</a></li>
+		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes">GPS transmitida</a></li>
 		    <li class="divider"></li>
 		    <li><a href="#!">Mi Cuenta</a></li>
 		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/logout">Log Out</a></li>
@@ -92,7 +92,7 @@
 		    </li>
 		  </ul>
 		</li>
-		<li class="bold"><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes" class="">GPS Transmición</a></li>
+		<li class="bold"><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes" class="">GPS Transmitida</a></li>
 	</ul>
 
   </div>
