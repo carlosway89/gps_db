@@ -81,7 +81,7 @@ class savedataCommand extends CConsoleCommand {
 
         // $date_to="2015-06-24%2010:25:59";
 
-        $date_to=date("Y-m-d H:i:s");
+        $date_to=date("Y-m-d H:i:s",time() + 3600);
 
         $file="http://gps.gsavt.com/services/history.php?xml=true&login=$user&password=$password&datetime_from=$date_from&datetime_to=$date_to";
 
