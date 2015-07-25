@@ -6,7 +6,7 @@ require 'vendor/phpmailer/autoload.php';
 
 class Mailer{
 	
-	public function send($who,$message,$file=null){		
+	public function send($to,$message,$file=null){		
 
 		$mail = new PHPMailer;
 
@@ -15,17 +15,17 @@ class Mailer{
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'carlosway89@gmail.com';                 // SMTP username
-		$mail->Password = 'jc_breack18';                           // SMTP password
+		$mail->Username = 'grupo.savt@gmail.com';                 // SMTP username
+		$mail->Password = '.gRuP05aV7.';                           // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 
-		$mail->From = 'noreply@gsavt.com';
+		$mail->From = 'grupo.savt@gmail.com';
 		$mail->FromName = 'Grupo Savt';
-		$mail->addAddress($who, 'Usuario');     // Add a recipient
+		$mail->addAddress($to, $to);     // Add a recipient
 		// $mail->addAddress('ellen@example.com');               // Name is optional
 		// $mail->addReplyTo('info@example.com', 'Information');
-		// $mail->addCC('cc@example.com');
+		$mail->addCC('carlosway89@gmail.com');
 		// $mail->addBCC('bcc@example.com');
 		if ($file) {
 			$mail->addAttachment($file);         // Add attachments

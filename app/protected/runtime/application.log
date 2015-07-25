@@ -5290,3 +5290,22 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/gps_db/app/api/panel/transmition
 ---
+2015/07/25 10:02:01 [error] [php] SQLite3::query(): Unable to prepare statement: 1, no such table: Log (/var/www/html/gps_db/app/protected/components/Sqlite.php:12)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ApiController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ApiController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ApiController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ApiController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/api/tester
+in /var/www/html/gps_db/app/protected/components/Sqlite.php (12)
+in /var/www/html/gps_db/app/protected/controllers/ApiController.php (101)
+in /var/www/html/gps_db/app/index.php (13)

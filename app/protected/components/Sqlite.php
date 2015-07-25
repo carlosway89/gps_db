@@ -19,14 +19,18 @@ class Sqlite{
 
 		    $data=array();
 
-		    while ($row = $tablesquery->fetchArray(SQLITE3_ASSOC)) {
-			   $data[]=(object)$tablesquery->fetchArray();
-			}
+		    if (!empty($tables)) {
+		    	while ($row = $tablesquery->fetchArray(SQLITE3_ASSOC)) {
+				   $data[]=(object)$row;
+				}
+		    }
+		    
 		}
 	    catch (Exception $exception) {
 	        // sqlite3 throws an exception when it is unable to connect
 	            $data="No existe registro";
 	    }
+
 		$data=(object) $data;
 		
 

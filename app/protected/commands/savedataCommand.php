@@ -76,7 +76,7 @@ class savedataCommand extends CConsoleCommand {
         // $password="jh12345";
 
         // $date_from="2015-06-23%2002:00:00";
-        $date_from=date("Y-m-d H:i:s", time() - 180); // 86400 -> 1 day ago; 3600 -> 1 hour ago; 60 -> 1 minute ago
+        $date_from=date("Y-m-d H:i:s", time() - 2*3600); // 86400 -> 1 day ago; 3600 -> 1 hour ago; 60 -> 1 minute ago
         //
 
         // $date_to="2015-06-24%2010:25:59";
@@ -107,6 +107,7 @@ class savedataCommand extends CConsoleCommand {
 
                     $this->saveMensajes($value);
                 }
+                // print_r($value);
 
                 
             }

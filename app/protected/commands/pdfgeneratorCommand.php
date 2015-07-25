@@ -34,7 +34,7 @@ class pdfgeneratorCommand extends CConsoleCommand {
         $mail=new Mailer();
         $file=$file!=""?$file:null;
 
-        $to="jc_breack18@hotmail.com";
+        $to="gsavtecnologia@gmail.com";
         
         $message= (object) array(
             "subject"=>"Reporte de transmision GPS",
