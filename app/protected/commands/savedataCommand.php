@@ -98,10 +98,10 @@ class savedataCommand extends CConsoleCommand {
             
             foreach ($xml->point as $key => $value) {
 
-                $placa=strtoupper(str_replace(" ","",$value->object));
+                $placa=strtoupper(str_replace(" ","",$value->object_name));
                 
                 $fecha=date('Y-m-d H:i:s',strtotime('-5 Hours', strtotime($value->datetime)));
-                
+
                 $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$fecha,"placa"=>$placa)); 
 
                 if ($modelo==null) {
@@ -134,8 +134,10 @@ class savedataCommand extends CConsoleCommand {
 
                 
                 $placa=strtoupper(str_replace(" ","",$value->object_name));
+
+                $fecha=date('Y-m-d H:i:s',strtotime('-5 Hours', strtotime($value->datetime)));
                 
-                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime,"placa"=>$placa));
+                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$fecha,"placa"=>$placa));
 
                 if ($modelo==null) {
                 
