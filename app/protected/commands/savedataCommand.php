@@ -100,7 +100,9 @@ class savedataCommand extends CConsoleCommand {
 
                 $placa=strtoupper(str_replace(" ","",$value->object));
                 
-                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime,"placa"=>$placa)); 
+                $fecha=date('Y-m-d H:i:s',strtotime('-5 Hours', strtotime($value->datetime)));
+                
+                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$fecha,"placa"=>$placa)); 
 
                 if ($modelo==null) {
                 
