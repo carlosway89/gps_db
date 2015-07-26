@@ -7,7 +7,7 @@ class savedataCommand extends CConsoleCommand {
 
         $vehiculo=new Vehiculo();
 
-        $placa=strtoupper(str_replace(" ","",$value->object));
+        $placa=strtoupper(str_replace(" ","",$value->object_name));
         $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$placa)); 
 
         if (!$vehicle_current) {
@@ -41,11 +41,12 @@ class savedataCommand extends CConsoleCommand {
 
         $mensaje=new Mensajes();
 
-        $mensaje->placa=strtoupper(str_replace(" ","",$value->object));
-        $mensaje->coordinate_id=$value->coordinate_id;
+        $mensaje->placa=strtoupper(str_replace(" ","",$value->object_name));
+        // $mensaje->coordinate_id=$value->coordinate_id;
+        $mensaje->coordinate_id=0;
         $mensaje->longitud=$value->longitude;
         $mensaje->latitud=$value->latitude;
-        $mensaje->velocidad=$value->speed;
+        $mensaje->velocidad=$value->Speed;
         $mensaje->fecha=$value->datetime;
         $mensaje->rumbo=$value->direction;
 
@@ -114,6 +115,42 @@ class savedataCommand extends CConsoleCommand {
         }
     }
 
+    public function status($user,$password)
+    {
+        $file="http://gps.gsavt.com/services/status.php?xml=false&login=$user&password=$password";
+
+        $c = curl_init($file);
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+        $page = curl_exec($c);
+        curl_close($c);
+        $json=json_decode($page);
+        
+        // print_r($json->data->items);
+        if (isset($json->data)) {
+            
+            foreach ($json->data->items as $key => $value) {
+
+                
+                $placa=strtoupper(str_replace(" ","",$value->object_name));
+                
+                $modelo=Mensajes::model()->findByAttributes(array("fecha"=>$value->datetime,"placa"=>$placa));
+
+                if ($modelo==null) {
+                
+                    $this->saveVehicle($value);
+
+                    $this->saveMensajes($value);
+                }
+
+                // print_r($value);
+
+                
+            }
+        }
+
+
+    }
+
  	public function run() {
 
         $models=Usuarios::model()->findAll();
@@ -126,7 +163,7 @@ class savedataCommand extends CConsoleCommand {
          
         foreach ($rows as $value) {
             // print_r($value);
-            $this->conexion($value['user'],$value['password']);
+            $this->status($value['user'],$value['password']);
         }
 
  		

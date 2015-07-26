@@ -5337,3 +5337,28 @@ Stack trace:
 REQUEST_URI=/gps_db/app/api/tester
 in /var/www/html/gps_db/app/protected/controllers/ApiController.php (78)
 in /var/www/html/gps_db/app/index.php (13)
+2015/07/26 17:49:50 [error] [php] Undefined property: stdClass::$data (/var/www/html/gps_db/app/protected/commands/savedataCommand.php:128)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#2 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/26 17:50:37 [error] [php] Undefined property: stdClass::$data (/var/www/html/gps_db/app/protected/commands/savedataCommand.php:128)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#2 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/26 17:52:40 [error] [php] Undefined property: stdClass::$speed (/var/www/html/gps_db/app/protected/commands/savedataCommand.php:49)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleCommandRunner.php(67): savedataCommand->run()
+#1 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#2 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#3 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
+2015/07/26 17:54:58 [error] [php] Undefined property: stdClass::$data (/var/www/html/gps_db/app/protected/commands/savedataCommand.php:129)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#2 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
+
