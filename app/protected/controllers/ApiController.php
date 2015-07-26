@@ -67,9 +67,15 @@ class ApiController extends Controller
 
     public function actionTester(){
 
-        echo date("Y-m-d H:i:s");
+        // echo date("Y-m-d H:i:s");
 
-        echo date('Y-m-d H:i:s', time() - 3600);
+        // echo date('Y-m-d H:i:s', time() - 3600);
+
+        $dir = '../ClienteCCMF2_5/';
+
+        foreach(glob($dir.'*.db') as $file) {
+          print $file . "\n";
+        }
 
         // $mail=new Mailer();
 

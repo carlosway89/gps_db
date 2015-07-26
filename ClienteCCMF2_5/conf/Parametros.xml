@@ -13,7 +13,7 @@ When in Windows: 'C:/path/to/driverjdbc.jar'
           QUERY="SELECT veh.placa, longitud, latitud, rumbo, velocidad, fecha, panico
             FROM mensajes mj
             INNER JOIN vehiculo AS veh ON mj.placa = veh.placa
-            WHERE fecha > DATE_ADD( now( ) , INTERVAL -60
+            WHERE fecha > DATE_ADD( now( ) , INTERVAL -30
             MINUTE )
             ORDER BY mj.placa DESC " >
 </DATABASE>
