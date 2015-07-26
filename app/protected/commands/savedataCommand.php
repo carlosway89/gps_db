@@ -47,7 +47,7 @@ class savedataCommand extends CConsoleCommand {
         $mensaje->longitud=$value->longitude;
         $mensaje->latitud=$value->latitude;
         $mensaje->velocidad=$value->Speed;
-        $mensaje->fecha=$value->datetime;
+        $mensaje->fecha=date('Y-m-d H:i:s',strtotime('-5 Hours', strtotime($value->datetime)));
         $mensaje->rumbo=$value->direction;
 
 
