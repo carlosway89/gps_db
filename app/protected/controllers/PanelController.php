@@ -88,7 +88,7 @@ class PanelController extends Controller
         // }else{
         // 	$sentence="SELECT * FROM vLog;";
         // }
-        $sentence="SELECT * FROM vLog;";
+        $sentence="SELECT * FROM vLog order by fecLoc DESC;";
         
         $model=$sql->execute($db,$sentence);
 
