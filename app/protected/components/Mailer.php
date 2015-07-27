@@ -39,10 +39,9 @@ class Mailer{
 		$mail->AltBody = $message->body;
 
 		if(!$mail->send()) {
-		    echo 'Message could not be sent.';
-		    echo 'Mailer Error: ' . $mail->ErrorInfo;
+		    return 'Message could not be sent..Mailer Error: ' . $mail->ErrorInfo;
 		} else {
-		    echo 'Message has been sent';
+		    return 'Su Mensaje ha sido Enviado';
 		}
 
 

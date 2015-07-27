@@ -185,6 +185,12 @@ main nav ul a {
 .pager .pagination{
 	float: right;
 }
+.alert{
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+}
+
 @media only screen and (max-width : 992px) {
 
 	tr.filters{

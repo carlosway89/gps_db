@@ -64,6 +64,7 @@ class ReporteController extends Controller
         }
 
         $pdf_file="";
+        $mensaje="";
         $vehicle=Vehiculo::model()->findAll();
         
         $rows = array();
@@ -80,17 +81,20 @@ class ReporteController extends Controller
 
 	        $placa="";
 
-	        if (isset($_GET['Reporte']['placa'])) {
-	        	$placa=$_GET['Reporte']['placa'];
-	        }
+	        
 	        
 
 	        $db="../ClienteCCMF2_5/".$log;   
 
 	        // $db="../ClienteCCMF2_5/logJUL24.db";               
 
-	        $sentence="SELECT * FROM vLog order by fecLoc DESC;";
+	        $sentence="SELECT * FROM vLog order by fecLoc DESC LIMIT 200;";
 	        
+	        if (isset($_GET['Reporte']['placa'])) {
+	        	$placa=$_GET['Reporte']['placa'];
+	        	$sentence="SELECT * FROM vLog where placa='".$placa."' order by fecLoc DESC LIMIT 200;";
+	        }
+
 	        $model=$sql->execute($db,$sentence);
 
 
@@ -116,7 +120,7 @@ class ReporteController extends Controller
 
 	        Yii::app()->user->setState('pdf_file',null);
 
-	        $mail->send($to,$message,$file);
+	        $mensaje=$mail->send($to,$message,$file);
 
 	        
         }
@@ -126,7 +130,8 @@ class ReporteController extends Controller
 		$this->render('index',array(
 			'files'=>$files,
 			'vehicle'=>(object)$rows,
-			'pdf_file'=>$pdf_file
+			'pdf_file'=>$pdf_file,
+			'mensaje'=>$mensaje
 		));
 
 	}
