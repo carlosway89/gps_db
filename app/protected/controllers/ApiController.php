@@ -71,11 +71,7 @@ class ApiController extends Controller
 
         // echo date('Y-m-d H:i:s', time() - 3600);
 
-        $dir = '../ClienteCCMF2_5/';
-
-        foreach(glob($dir.'*.db') as $file) {
-          print $file . "\n";
-        }
+        
 
         // $mail=new Mailer();
 
@@ -96,19 +92,21 @@ class ApiController extends Controller
         // }
 
 
-        // $pdf=new Pdf();
+        $pdf=new Pdf();
         
-        // $sql=new Sqlite();
+        $sql=new Sqlite();
         
-        // $db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";               
+        $db="../ClienteCCMF2_5/logJUL24.db";               
 
-        // $sentence="SELECT * FROM vLog;";
+        $sentence="SELECT * FROM vLog;";
         
-        // $model=$sql->execute($db,$sentence);
+        $model=$sql->execute($db,$sentence);
 
-        // $html=$this->renderPartial('/panel/transmition', array('model'=>$model),true,true);
+        // $html=$this->renderPartial('/panel/transmition_pdf', array('model'=>$model),true,true);
 
         // $pdf->create($html);
+
+        $html=$this->renderPartial('/panel/transmition_pdf', array('model'=>$model));
 
 
     }

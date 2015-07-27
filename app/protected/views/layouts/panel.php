@@ -57,8 +57,8 @@
 		  	<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/usuarios">Transmision en Vivo</a></li>
 		  	<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/usuarios">Usuarios</a></li>
 		    <li><a href="#!">Reporte Grafico</a></li>
-		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/vehiculo">Vehiculos</a>
-		    </li>
+		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/vehiculo">Vehiculos</a></li>
+		    <li class="bold"><a href="<?php echo Yii::app()->request->baseUrl; ?>/reporte" class="">Reportes</a></li>
 		    <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes">GPS transmitida</a></li>
 		    <li class="divider"></li>
 		    <li><a href="#!">Mi Cuenta</a></li>
@@ -92,6 +92,7 @@
 		    </li>
 		  </ul>
 		</li>
+		<li class="bold"><a href="<?php echo Yii::app()->request->baseUrl; ?>/reporte" class="">Reportes</a></li>
 		<li class="bold"><a href="<?php echo Yii::app()->request->baseUrl; ?>/mensajes" class="">GPS Transmitida</a></li>
 	</ul>
 

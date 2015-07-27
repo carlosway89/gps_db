@@ -5362,3 +5362,539 @@ Stack trace:
 #1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
 #2 /var/www/html/gps_db/app/cron.php(12): CConsoleApplication->run()
 
+2015/07/27 17:21:54 [error] [php] require(/var/www/htmlprotected/views/panel/transmition_pdf.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (68)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:28:35 [error] [php] Undefined index: Reporte[file] (/var/www/html/gps_db/app/protected/controllers/ReporteController.php:60)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#7 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (60)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:28:53 [error] [php] Undefined index: Reporte[file] (/var/www/html/gps_db/app/protected/controllers/ReporteController.php:60)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#7 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (60)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:28:55 [error] [php] Undefined index: Reporte[file] (/var/www/html/gps_db/app/protected/controllers/ReporteController.php:60)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#7 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (60)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:29:00 [error] [php] Undefined variable: log (/var/www/html/gps_db/app/protected/controllers/ReporteController.php:62)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#7 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (62)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:34:29 [error] [php] require(/var/www/htmlprotected/views/panel/transmition_pdf.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (72)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:42:41 [error] [php] require(/var/www/htmlprotected/views/panel/transmition_pdf.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (72)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:43:22 [error] [php] require(/var/www/html/protected/views/panel/transmition_pdf.php): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (72)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:43:54 [error] [php] require(panel/transmition_pdf): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (72)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 17:45:22 [error] [exception.CException] exception 'CException' with message 'CController cannot find the requested view "panel/transmition_pdf".' in /var/www/html/gps_db/app/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(72): CController->renderPartial('panel/transmiti...', Array, true, true)
+#1 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reporte')
+#12 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+HTTP_REFERER=http://localhost/gps_db/app/reporte
+---
+2015/07/27 17:59:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:00:59 [error] [php] file_put_contents(pdf/prueba2015-07-27 18:00:59.pdf): failed to open stream: Permission denied (/var/www/html/gps_db/app/protected/components/Pdf.php:40)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+in /var/www/html/gps_db/app/protected/components/Pdf.php (40)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (73)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 18:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:03:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:04:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:12:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "pdf/pdf/prueba2015-07-27 17:59:07.pdf".' in /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('pdf/pdf/prueba2...')
+#1 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gps_db/app/pdf/pdf/prueba2015-07-27%2017:59:07.pdf
+HTTP_REFERER=http://localhost/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL10.db&action=
+---
+2015/07/27 18:24:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/gps_db/app/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('pdf')
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#10 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/gps_db/app/reporte/pdf?pdf=prueba2015-07-24%2016:14:05.pdf
+---
+2015/07/27 18:25:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/gps_db/app/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('pdf')
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#10 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/gps_db/app/reporte/pdf?pdf=prueba2015-07-24%2016:14:05.pdf
+---
+2015/07/27 18:25:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/gps_db/app/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('pdf')
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#10 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/gps_db/app/reporte/pdf?pdf=prueba2015-07-24%2016:14:05.pdf
+---
+2015/07/27 18:25:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/html/gps_db/app/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): CController->run('pdf')
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('reporte/pdf')
+#10 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/html/gps_db/app/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/gps_db/app/reporte/pdf?pdf=prueba2015-07-24%2016:14:05.pdf
+---
+2015/07/27 18:32:41 [error] [php] Undefined variable: pdf_file (/var/www/html/gps_db/app/protected/views/reporte/index.php:52)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(782): ReporteController->renderPartial()
+#2 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(96): ReporteController->render()
+#3 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#12 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/views/reporte/index.php (52)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (96)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 18:36:49 [error] [php] Undefined variable: pdf_file (/var/www/html/gps_db/app/protected/views/reporte/index.php:52)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(782): ReporteController->renderPartial()
+#2 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(96): ReporteController->render()
+#3 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#12 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL25.db&action=
+in /var/www/html/gps_db/app/protected/views/reporte/index.php (52)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (96)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 18:43:34 [error] [php] require(/panel/transmition): failed to open stream: No such file or directory (/var/www/html/gps_db/app/yii/framework/web/CBaseController.php:126)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ApiController->actionTester()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ApiController->runAction()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ApiController->filterAccessControl()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ApiController->runActionWithFilters()
+#9 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ApiController->run()
+#10 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/api/tester
+in /var/www/html/gps_db/app/protected/controllers/ApiController.php (105)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 19:55:28 [error] [php] Undefined variable: placa (/var/www/html/gps_db/app/protected/controllers/ReporteController.php:88)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#1 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#4 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#7 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL24.db&action=
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (88)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 20:49:49 [error] [php] Array to string conversion (/var/www/html/gps_db/app/protected/views/reporte/index.php:31)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(782): ReporteController->renderPartial()
+#2 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(111): ReporteController->render()
+#3 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#12 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte
+in /var/www/html/gps_db/app/protected/views/reporte/index.php (31)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (111)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 20:51:39 [error] [php] Trying to get property of non-object (/var/www/html/gps_db/app/protected/views/reporte/index.php:31)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(782): ReporteController->renderPartial()
+#2 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(111): ReporteController->render()
+#3 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#12 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte
+in /var/www/html/gps_db/app/protected/views/reporte/index.php (31)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (111)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 20:52:20 [error] [php] Trying to get property of non-object (/var/www/html/gps_db/app/protected/views/reporte/index.php:31)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(782): ReporteController->renderPartial()
+#2 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(111): ReporteController->render()
+#3 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#12 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte
+in /var/www/html/gps_db/app/protected/views/reporte/index.php (31)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (111)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 20:53:19 [error] [php] Array to string conversion (/var/www/html/gps_db/app/protected/views/reporte/index.php:31)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#1 /var/www/html/gps_db/app/yii/framework/web/CController.php(782): ReporteController->renderPartial()
+#2 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(111): ReporteController->render()
+#3 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#4 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#12 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte
+in /var/www/html/gps_db/app/protected/views/reporte/index.php (31)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (111)
+in /var/www/html/gps_db/app/index.php (13)
+2015/07/27 20:55:42 [error] [php] Undefined index: placa (/var/www/html/gps_db/app/protected/views/panel/transmition_pdf.php:32)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/html/gps_db/app/yii/framework/web/CBaseController.php(95): ReporteController->renderInternal()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#3 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(97): ReporteController->renderPartial()
+#4 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#10 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#14 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL24.db&Reporte%5Bplaca%5D=T6R967&action=
+in /var/www/html/gps_db/app/protected/views/panel/transmition_pdf.php (32)
+in /var/www/html/gps_db/app/protected/views/panel/transmition_pdf.php (33)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (97)
+2015/07/27 20:56:09 [error] [php] Undefined variable: placa (/var/www/html/gps_db/app/protected/views/panel/transmition_pdf.php:32)
+Stack trace:
+#0 /var/www/html/gps_db/app/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/html/gps_db/app/yii/framework/web/CBaseController.php(95): ReporteController->renderInternal()
+#2 /var/www/html/gps_db/app/yii/framework/web/CController.php(869): ReporteController->renderFile()
+#3 /var/www/html/gps_db/app/protected/controllers/ReporteController.php(97): ReporteController->renderPartial()
+#4 /var/www/html/gps_db/app/yii/framework/web/actions/CInlineAction.php(49): ReporteController->actionIndex()
+#5 /var/www/html/gps_db/app/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(133): ReporteController->runAction()
+#7 /var/www/html/gps_db/app/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/gps_db/app/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/html/gps_db/app/yii/framework/web/filters/CInlineFilter.php(58): ReporteController->filterAccessControl()
+#10 /var/www/html/gps_db/app/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/html/gps_db/app/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/gps_db/app/yii/framework/web/CController.php(265): ReporteController->runActionWithFilters()
+#13 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(282): ReporteController->run()
+#14 /var/www/html/gps_db/app/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/html/gps_db/app/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/html/gps_db/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/gps_db/app/reporte?Reporte%5Bfile%5D=logJUL24.db&Reporte%5Bplaca%5D=T6R967&action=
+in /var/www/html/gps_db/app/protected/views/panel/transmition_pdf.php (32)
+in /var/www/html/gps_db/app/protected/views/panel/transmition_pdf.php (33)
+in /var/www/html/gps_db/app/protected/controllers/ReporteController.php (97)

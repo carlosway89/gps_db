@@ -1,4 +1,4 @@
-<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo.png" alt="gsavt_logo" style="height: 65px;margin-top: 14px;">
+<img src="<?php echo $_SERVER["DOCUMENT_ROOT"]; ?>/gps_db/app/img/logo.png" alt="gsavt_logo" style="height: 65px;margin-top: 14px;">
 <br>
 <h2 style="text-align:center;color:#2196F3">Reporte de Transmision</h2>
 <br>
@@ -22,14 +22,14 @@
     if (isset($model)) {
 
 
-      if(isset($_GET['placa'])){
+      if(isset($placa)){
 
-        $filter=$_GET['placa'];
+        $filter=$placa;
         
         if ($filter) {
 
           $model = array_filter((array)$model,function($object){
-            return ($object->placa == $_GET['placa']);
+            return ($object->placa == $_GET['Reporte']['placa']);
           });
         }
 

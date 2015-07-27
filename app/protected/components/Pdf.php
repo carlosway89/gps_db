@@ -15,10 +15,12 @@ class Pdf{
 
 		
 
-		$filename="prueba".date("Y-m-d H:i:s");
+		$filename="report".date("Y-m-d H:i:s");
 
 		$fp=fopen("pdf/$filename.pdf","x");
 		fclose($fp) ;
+
+
 
 		// 		// Introducimos HTML de prueba
 		// $html = '<h1>Hola mundo!</h1>';
@@ -36,9 +38,13 @@ class Pdf{
 		$pdf->render();
 
 		file_put_contents('pdf/'.$filename.".pdf", $pdf->output());
-		// $pdf->stream("dompdf_out.pdf", array("Attachment" => false));
+		// $pdf->stream("$filename.pdf", array("Attachment" => false));
 
-		return "pdf/".$filename.".pdf";
+		// chmod("pdf/$filename.pdf", 0777);
+
+		return $filename.".pdf";
+
+
 		// exit(0);
 
 
