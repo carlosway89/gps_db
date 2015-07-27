@@ -11,7 +11,7 @@
 			<br>
 			<?php
 				if (isset($mensaje)) {
-					echo "<h2 class='green-text light-green lighten-4 center-align alert'>$mensaje</h2><br>";
+					echo "<h5 class='green-text light-green lighten-4 center-align alert'>$mensaje</h5><br>";
 				}
 			?>
 			<form method="get" id="form_report">
