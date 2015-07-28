@@ -57,14 +57,17 @@ class ReporteController extends Controller
 		$dir = '../ClienteCCMF2_5/';
 
 		$files=array();
+		$pdf_file="";
+        $mensaje="";
+
         foreach(glob($dir.'*.db') as $file) {
           
           $files[]=str_replace("../ClienteCCMF2_5/","",$file);
 
         }
 
-        $pdf_file="";
-        $mensaje="";
+        arsort($files);
+
         $vehicle=Vehiculo::model()->findAll();
         
         $rows = array();
@@ -81,12 +84,8 @@ class ReporteController extends Controller
 
 	        $placa="";
 
-	        
-	        
-
 	        $db="../ClienteCCMF2_5/".$log;   
-
-	        // $db="../ClienteCCMF2_5/logJUL24.db";               
+              
 
 	        $sentence="SELECT * FROM vLog order by fecLoc DESC LIMIT 200;";
 	        

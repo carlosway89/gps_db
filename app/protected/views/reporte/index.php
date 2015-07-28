@@ -10,14 +10,15 @@
 			<h4 class="center-align"><small>Lista de Transmisiones</small></h4>
 			<br>
 			<?php
-				if (isset($mensaje)) {
+			
+
+				if ($mensaje!="") {
 					echo "<h5 class='green-text light-green lighten-4 center-align alert'>$mensaje</h5><br>";
 				}
-			?>
-			<form method="get" id="form_report">
+			?>			<form method="get" id="form_report">
 				<div class="row">
 					<div class="input-field col s3 offset-s2">
-						<select name="Reporte[file]">
+						<select name="Reporte[file]" class="browser-default">
 						  <option value="" disabled selected>Eligir un Log</option>
 						  <?php foreach ($files as $key => $value) {
 								?>
@@ -26,10 +27,10 @@
 								}
 						  ?>
 						</select>
-						<label>Fechas de Transmision</label>
+						<!-- <label>Fechas de Transmision</label> -->
 					</div>
 					<div class="input-field col s3 ">
-						<select name="Reporte[placa]">
+						<select name="Reporte[placa]" class="browser-default">
 						  <option value="" disabled selected>Eligir una Placa</option>
 						  <?php foreach ($vehicle as $value) {
 								?>
@@ -41,7 +42,7 @@
 						  
 						  
 						</select>
-						<label>Placa del Auto</label>
+						<!-- <label>Placa del Auto</label> -->
 					</div>
 					<div class="col s4">
 						<br>
