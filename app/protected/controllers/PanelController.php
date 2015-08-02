@@ -76,9 +76,11 @@ class PanelController extends Controller
 	{
 		$sql=new Sqlite();
 		
-		setlocale (LC_TIME, "es_PE");
+		$months=array("01"=>"ENE","02"=>"FEB","03"=>"MAR","04"=>"ABR","05"=>"MAY","06"=>"JUN","07"=>"JUL","08"=>"AGO","09"=>"SEP","10"=>"OCT","11"=>"NOV","12"=>"DIC");
+		$month=$months[date("m")];
+		$day=date("d");
 
-		$db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";		        
+		$db="../ClienteCCMF2_5/log".$month.$day.".db";		        
 
         // if(isset($_GET['placa'])){
         // 	$filter=$_GET['placa'];
@@ -91,6 +93,7 @@ class PanelController extends Controller
         // }else{
         // 	$sentence="SELECT * FROM vLog;";
         // }
+        
         $sentence="SELECT * FROM vLog order by fecLoc DESC;";
         
         $model=$sql->execute($db,$sentence);
