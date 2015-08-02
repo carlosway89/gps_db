@@ -75,6 +75,9 @@ class PanelController extends Controller
 	public function actionTransmition($sentence="")
 	{
 		$sql=new Sqlite();
+		
+		setlocale (LC_TIME, "es_PE");
+
 		$db="../ClienteCCMF2_5/log".strtoupper(date("Md")).".db";		        
 
         // if(isset($_GET['placa'])){
