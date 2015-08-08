@@ -7,13 +7,13 @@ class savedataCommand extends CConsoleCommand {
 
         $vehiculo=new Vehiculo();
 
-        $placa=strtoupper(str_replace(" ","",$value->object_name));
-        $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$placa)); 
+        $_placa=strtoupper(str_replace(" ","",$value->object_name));
+        $vehicle_current=Vehiculo::model()->findByAttributes(array("placa"=>$_placa)); 
 
         if (!$vehicle_current) {
 
-            $vehiculo->placa=$placa;
-            $vehiculo->nombre=$value->object;
+            $vehiculo->placa=$_placa;
+            $vehiculo->nombre=$value->object_name;
 
 
             if (!$vehiculo->save()){
