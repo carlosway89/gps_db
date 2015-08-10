@@ -54,11 +54,13 @@ $('.search-form form').submit(function(){
 					            // 'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
 					            'url'=>'Yii::app()->createUrl("mensajes/admin", array("Mensajes[placa]"=>$data->placa))',
 								// 'url'=>'Yii::app()->createUrl("mensajes/admin?")',
+								'options'=>array('data-tool'=>'GPS transmitida','title'=>'','class'=>'tooltip tooltip-top arrow-down'), // put here the title to show when mouse over
 					        ),
 					        'filter' => array
 					        (
 					            'label'=>'<i class="material-icons purple-text text-darken-4">settings_remote</i>',
 					            'url'=>'Yii::app()->createUrl("panel/index", array("placa"=>$data->placa))',
+					            'options'=>array('data-tool'=>'Transmision en vivo','title'=>'','class'=>'tooltip tooltip-top arrow-down'), // put here the title to show when mouse over
 					        ),
 					        // 'down' => array
 					        // (
