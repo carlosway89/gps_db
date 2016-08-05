@@ -32,7 +32,7 @@ class ApiController extends Controller
     {
         return array(
             array('allow',
-                'actions'=>array('index','admin','create','view','form','update','list'),
+                'actions'=>array('index','admin','create','view','form','update','list','checkStatus'),
                 // 'expression'=>'Yii::app()->user->checkAccess("administrador")',
                 'users'=>array('@'),
                 ),
@@ -64,6 +64,7 @@ class ApiController extends Controller
         return $uri[$i];
     }
 
+    
 
     public function actionTester(){
 
@@ -92,22 +93,23 @@ class ApiController extends Controller
         // }
 
 
-        $pdf=new Pdf();
+        // $pdf=new Pdf();
         
-        $sql=new Sqlite();
+        // $sql=new Sqlite();
         
-        $db="../ClienteCCMF2_5/logJUL24.db";               
+        // $db="../ClienteCCMF2_5/logJUL24.db";               
 
-        $sentence="SELECT * FROM vLog;";
+        // $sentence="SELECT * FROM vLog;";
         
-        $model=$sql->execute($db,$sentence);
+        // $model=$sql->execute($db,$sentence);
 
         // $html=$this->renderPartial('/panel/transmition_pdf', array('model'=>$model),true,true);
 
         // $pdf->create($html);
 
-        $html=$this->renderPartial('/panel/transmition_pdf', array('model'=>$model));
+        // $html=$this->renderPartial('/panel/transmition_pdf', array('model'=>$model));
 
+        echo 'bien';
 
     }
 

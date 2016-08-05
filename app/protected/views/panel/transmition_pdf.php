@@ -7,8 +7,8 @@
     <tr>
         <th data-field="placa">Placa</th>
         <th data-field="vel">Velocidad</th>
-        <th data-field="lat">Longitud</th>
-        <th data-field="long">Latitud</th>
+        <th data-field="lat">Latitud</th>
+        <th data-field="long">Longitud</th>
         <th data-field="dir">Direccion</th>
         <th data-field="fecLoc">Fecha</th>
         <th data-field="transmition">Estado</th>

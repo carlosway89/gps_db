@@ -2,80 +2,80 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-07-10T14:07:03</date>
-  <millis>1436530023368</millis>
+  <date>2016-08-01T10:49:46</date>
+  <millis>1470041386391</millis>
   <sequence>0</sequence>
   <logger>de.javawi.jstun.attribute.MappedAddress</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.attribute.MappedAddress</class>
   <method>parse</method>
-  <thread>10</thread>
-  <message>Message Attribute: Mapped Address parsed: Address 188.105.245.178, Port 51668.</message>
+  <thread>16</thread>
+  <message>Message Attribute: Mapped Address parsed: Address 178.10.70.173, Port 36512.</message>
 </record>
 <record>
-  <date>2015-07-10T14:07:03</date>
-  <millis>1436530023369</millis>
+  <date>2016-08-01T10:49:46</date>
+  <millis>1470041386393</millis>
   <sequence>1</sequence>
   <logger>SourceAddress</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.attribute.SourceAddress</class>
   <method>parse</method>
-  <thread>10</thread>
-  <message>Message Attribute: Source Address parsed: Address 198.27.81.168, Port 3478.</message>
+  <thread>16</thread>
+  <message>Message Attribute: Source Address parsed: Address 192.95.17.62, Port 3478.</message>
 </record>
 <record>
-  <date>2015-07-10T14:07:03</date>
-  <millis>1436530023370</millis>
+  <date>2016-08-01T10:49:46</date>
+  <millis>1470041386395</millis>
   <sequence>2</sequence>
   <logger>de.javawi.jstun.attribute.ChangeRequest</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.attribute.ChangedAddress</class>
   <method>parse</method>
-  <thread>10</thread>
-  <message>Message Attribute: Changed Address parsed: Address 192.95.17.62, Port 3479.</message>
+  <thread>16</thread>
+  <message>Message Attribute: Changed Address parsed: Address 158.69.27.166, Port 3479.</message>
 </record>
 <record>
-  <date>2015-07-10T14:07:14</date>
-  <millis>1436530034020</millis>
+  <date>2016-08-01T10:49:57</date>
+  <millis>1470041397051</millis>
   <sequence>3</sequence>
   <logger>de.javawi.jstun.attribute.MappedAddress</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.attribute.MappedAddress</class>
   <method>parse</method>
-  <thread>10</thread>
-  <message>Message Attribute: Mapped Address parsed: Address 188.105.245.178, Port 51668.</message>
+  <thread>16</thread>
+  <message>Message Attribute: Mapped Address parsed: Address 178.10.70.173, Port 36512.</message>
 </record>
 <record>
-  <date>2015-07-10T14:07:14</date>
-  <millis>1436530034021</millis>
+  <date>2016-08-01T10:49:57</date>
+  <millis>1470041397051</millis>
   <sequence>4</sequence>
   <logger>SourceAddress</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.attribute.SourceAddress</class>
   <method>parse</method>
-  <thread>10</thread>
-  <message>Message Attribute: Source Address parsed: Address 192.95.17.62, Port 3479.</message>
+  <thread>16</thread>
+  <message>Message Attribute: Source Address parsed: Address 158.69.27.166, Port 3479.</message>
 </record>
 <record>
-  <date>2015-07-10T14:07:14</date>
-  <millis>1436530034022</millis>
+  <date>2016-08-01T10:49:57</date>
+  <millis>1470041397051</millis>
   <sequence>5</sequence>
   <logger>de.javawi.jstun.attribute.ChangeRequest</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.attribute.ChangedAddress</class>
   <method>parse</method>
-  <thread>10</thread>
-  <message>Message Attribute: Changed Address parsed: Address 198.27.81.168, Port 3478.</message>
+  <thread>16</thread>
+  <message>Message Attribute: Changed Address parsed: Address 192.95.17.62, Port 3478.</message>
 </record>
 <record>
-  <date>2015-07-10T14:07:24</date>
-  <millis>1436530044541</millis>
+  <date>2016-08-01T10:50:07</date>
+  <millis>1470041407567</millis>
   <sequence>6</sequence>
   <logger>DiscoveryTest</logger>
   <level>OFF</level>
   <class>de.javawi.jstun.test.DiscoveryTest</class>
   <method>test3</method>
-  <thread>10</thread>
+  <thread>16</thread>
   <message>Node is behind a port restricted NAT.</message>
 </record>
 </log>

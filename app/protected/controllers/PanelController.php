@@ -73,14 +73,21 @@ class PanelController extends Controller
 	}
 
 	public function actionTransmition($sentence="")
-	{
-		$sql=new Sqlite();
-		
-		$months=array("01"=>"ENE","02"=>"FEB","03"=>"MAR","04"=>"ABR","05"=>"MAY","06"=>"JUN","07"=>"JUL","08"=>"AGO","09"=>"SEP","10"=>"OCT","11"=>"NOV","12"=>"DIC");
-		$month=$months[date("m")];
-		$day=date("d");
+	{	
+		$criteria = new CDbCriteria;
 
-		$db="../ClienteCCMF2_5/log".$month.$day.".db";		        
+        $criteria->condition='estado!="0"';
+
+        $criteria->limit = 200;
+
+		$model=Mensaje::model()->findAll($criteria);
+		// $sql=new Sqlite();
+		
+		// $months=array("01"=>"ENE","02"=>"FEB","03"=>"MAR","04"=>"ABR","05"=>"MAY","06"=>"JUN","07"=>"JUL","08"=>"AGO","09"=>"SEP","10"=>"OCT","11"=>"NOV","12"=>"DIC");
+		// $month=$months[date("m")];
+		// $day=date("d");
+
+		// $db="../ClienteCCMF2_5/log".$month.$day.".db";		        
 
         // if(isset($_GET['placa'])){
         // 	$filter=$_GET['placa'];
@@ -94,9 +101,9 @@ class PanelController extends Controller
         // 	$sentence="SELECT * FROM vLog;";
         // }
         
-        $sentence="SELECT * FROM vLog order by fecLoc DESC;";
+        // $sentence="SELECT * FROM vLog order by fecLoc DESC;";
         
-        $model=$sql->execute($db,$sentence);
+        // $model=$sql->execute($db,$sentence);
 
 		echo $this->renderPartial('transmition', array('model'=>$model));
 	}

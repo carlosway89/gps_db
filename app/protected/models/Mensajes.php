@@ -10,7 +10,7 @@
  * @property integer $velocidad
  * @property integer $rumbo
  * @property string $fecha
- * @property string $panico
+ * @property string $evento
  * @property string $placa
  * @property integer $coordinate_id
  */
@@ -45,11 +45,11 @@ class Mensajes extends CActiveRecord
 			array('longitud, latitud, velocidad, rumbo, fecha, placa, coordinate_id', 'required'),
 			array('velocidad, rumbo, coordinate_id', 'numerical', 'integerOnly'=>true),
 			array('longitud, latitud', 'length', 'max'=>15),
-			array('panico', 'length', 'max'=>3),
+			array('evento', 'length', 'max'=>3),
 			array('placa', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, longitud, latitud, velocidad, rumbo, fecha, panico, placa, coordinate_id', 'safe', 'on'=>'search'),
+			array('id, longitud, latitud, velocidad, rumbo, fecha, evento, placa, coordinate_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,7 +76,7 @@ class Mensajes extends CActiveRecord
 			'velocidad' => 'Velocidad',
 			'rumbo' => 'Rumbo',
 			'fecha' => 'Fecha',
-			'panico' => 'Panico',
+			'evento' => 'evento',
 			'placa' => 'Placa',
 			'coordinate_id' => 'Coordinate',
 		);
@@ -99,7 +99,7 @@ class Mensajes extends CActiveRecord
 		$criteria->compare('velocidad',$this->velocidad);
 		$criteria->compare('rumbo',$this->rumbo);
 		$criteria->compare('fecha',$this->fecha,true);
-		$criteria->compare('panico',$this->panico,true);
+		$criteria->compare('evento',$this->evento,true);
 		$criteria->compare('placa',$this->placa,true);
 		$criteria->compare('coordinate_id',$this->coordinate_id);
 

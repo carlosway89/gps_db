@@ -4,7 +4,7 @@
     > is &gt; 
 When in Windows: 'C:/path/to/driverjdbc.jar'
 -->
-<DATABASE DRIVER_LOCATION='/var/www/html/gps_db/ClienteCCMF2_5/lib/mysql-connector-java-5.0.8-bin.jar'
+<DATABASE DRIVER_LOCATION='/var/www/html/gps_db/clienteConsola2-1/mysql-connector-java-5.1.6-bin.jar'
           DRIVER_CLASS='com.mysql.jdbc.Driver'
           BD_URL='jdbc:mysql://127.0.0.1:3306/gps_savt'
           USER='root' PASSWORD='150189'
