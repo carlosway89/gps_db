@@ -77,6 +77,7 @@ class PanelController extends Controller
 		$criteria = new CDbCriteria;
 
         $criteria->condition='estado!="0"';
+        $criteria->order = 'id DESC';
 
         $criteria->limit = 200;
 

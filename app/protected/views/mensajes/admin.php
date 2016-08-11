@@ -48,6 +48,8 @@ $('.search-form form').submit(function(){
 					'rumbo',
 					'fecha',
 					'placa',
+					'evento',
+					'estado',
 					/*
 					'panico',
 					'placa',
